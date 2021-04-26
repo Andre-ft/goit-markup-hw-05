@@ -258,7 +258,8 @@ span.vert-align {
   border-radius: 4px;
 }
 
-.hero .button:hover {
+.hero .button:hover,
+.hero .button:focus {
   color: var(--accent-color);
   background-color: #fff;
 }
