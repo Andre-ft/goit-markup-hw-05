@@ -346,8 +346,36 @@ span.vert-align {
 }
 
 .what-we-doing-item {
+  /* position: relative; */
   width: calc((100% - 60px) / 3);
 }
+
+/* .what-we-doing-item::after {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-doing-item:nth-child(1)::after {
+  content: 'десктопные приложения';
+}
+
+.what-we-doing-item:nth-child(2)::after {
+  content: 'мобильные приложения';
+}
+
+.what-we-doing-item:nth-child(3)::after {
+  content: 'дизайнерские решения';
+} */
 
 /* ========== our team ========== */
 
@@ -400,17 +428,23 @@ span.vert-align {
   margin-right: auto;
 }
 
-.social-links li {
+.social-links > li {
+  width: 44px;
+  height: 44px;
+}
+
+.social-links .link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 100%;
+  height: 100%;
   fill: var(--svg-color);
   border-radius: 50%;
 }
 
-.social-links li:hover {
+.social-links .link:hover,
+.social-links .link:focus {
   background-color: var(--accent-color);
   fill: #ffffff;
 }
@@ -504,11 +538,16 @@ span.vert-align {
 }
 
 .customer-item {
+  width: 170px;
+  height: 92px;
+}
+
+.customer-item .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   border-width: 1px;
   border-color: var(--svg-color);
   border-style: solid;
@@ -516,7 +555,8 @@ span.vert-align {
   fill: var(--svg-color);
 }
 
-.customer-item:hover {
+.customer-item .link:hover,
+.customer-item .link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -568,13 +608,9 @@ footer > .container {
   padding-top: 12px;
 }
 
-.join-block li {
+.join-block .link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
-}
-
-.join-block li:hover {
-  background-color: var(--accent-color);
 }
 
 .join-block .social-links {
